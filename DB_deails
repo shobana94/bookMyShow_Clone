@@ -1,0 +1,3 @@
+DATABASE NAME = bookmyshow
+TABLE NAME = MovieSchedule, BookingDetails
+
