@@ -1,4 +1,5 @@
 import java.sql.*;
+import java.util.Scanner;
 
 public class App {
 
@@ -13,6 +14,7 @@ public class App {
     private static ResultSet resultSet;
 
     public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
         try {
             // Connect to MySQL database
             connection = DriverManager.getConnection(URL, USER, PASSWORD);
@@ -21,8 +23,8 @@ public class App {
             statement = connection.createStatement();
 
             // Get email and password from customer
-            String email = "goku2@gmail.com";
-            String password = "kamehameha";
+            String email =sc.nextLine();
+            String password = sc.nextLine();
 
             // SQL query to check if the user exists in the signup table
             String query = "SELECT * FROM customer WHERE email = '" + email + "' AND password = '" + password + "'";
