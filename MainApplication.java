@@ -10,7 +10,7 @@ public class MainApplication {
         Scanner scanner = new Scanner(System.in);
         
         while (true) {
-            System.out.println("Enter 1 to book ticket for a movie, 2 to exit :");
+            System.out.println("Enter 1 to book ticket for a movie, 2 to exit  :");
             int choice = scanner.nextInt();
             
             if (choice == 1) {

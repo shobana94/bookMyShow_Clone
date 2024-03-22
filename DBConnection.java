@@ -2,12 +2,12 @@ package movies;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-
+//shobana
 public class DBConnection {
     static {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-        } catch (ClassNotFoundException e) {
+        } catch (ClassNotFoundException e ) {
             e.printStackTrace();
         }
     }
