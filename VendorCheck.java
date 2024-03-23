@@ -20,7 +20,7 @@ public class VendorCheck {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         try {
-            System.out.println("aa gya");
+            //System.out.println("aa gya");
             // Open a connection
             // Class.forName("com.jdbc.mysql.driver");
             connection = DriverManager.getConnection(JDBC_URL, USERNAME, PASSWORD);
