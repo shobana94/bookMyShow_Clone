@@ -40,9 +40,12 @@ public class VendorCheck {
             System.out.println("Enter the time slot in foramt '03:00 PM' ie 'HH:MM AM/PM':");
             String timeSlot = scanner.nextLine();
 
+            System.out.println("Enter ticket price for a single ticket:");
+            int ticketPrice = scanner.nextInt();
+
 
             // Insert event details into the table
-            insertMovieDetails(movieName, seats, timeSlot);
+            insertMovieDetails(movieName, seats, timeSlot, ticketPrice);
 
             System.out.println("Movie Scheduled created and movie details inserted successfully.");
         } catch (SQLException e) {
@@ -71,13 +74,14 @@ public class VendorCheck {
     // //     preparedStatement.executeUpdate();
     // }
 
-    private static void insertMovieDetails(String movieName, int seats, String timeSlot) throws SQLException {
-        String insertSQL = "INSERT INTO MovieSchedule (MovieName, AvlSeats, TimeSlot) VALUES (?, ?, ?)";
+    private static void insertMovieDetails(String movieName, int seats, String timeSlot, int ticketPrice) throws SQLException {
+        String insertSQL = "INSERT INTO MovieSchedule (MovieName, AvlSeats, TimeSlot, ticket_price) VALUES (?, ?, ?, ?)";
         
         PreparedStatement preparedStatement = connection.prepareStatement(insertSQL);
         preparedStatement.setString(1, movieName);
         preparedStatement.setInt(2, seats);
         preparedStatement.setString(3, timeSlot);
+        preparedStatement.setInt(4, ticketPrice);
         int in  = preparedStatement.executeUpdate();
         System.out.println(in);
     }
