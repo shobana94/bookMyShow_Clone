@@ -68,7 +68,8 @@ public class VendorCheck {
     //                             "sId INT AUTO_INCREMENT PRIMARY KEY," +
     //                             "MovieName VARCHAR(255)," +
     //                             "AvlSeats VARCHAR(255)," +
-    //                             "TimeSlot VARCHAR(255))";
+    //                             "TimeSlot VARCHAR(255)"+
+    //                              "ticket_price INT");
         
     // //     PreparedStatement preparedStatement = connection.prepareStatement(createMovieTable);
     // //     preparedStatement.executeUpdate();
