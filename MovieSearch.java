@@ -1,10 +1,10 @@
-package movies;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class MovieSearch {
+
     public static void searchMovie(String movieName) {
         String query = "SELECT * FROM MovieSchedule WHERE MovieName = ?";
         
@@ -16,7 +16,7 @@ public class MovieSearch {
             if (result.next()) {
                 System.out.println("Movie available");
                 System.out.println("Available seats: " + result.getInt("AvlSeats"));
-                System.out.println("Time slot: " + result.getTime("TimeSlot"));
+                System.out.println("Time slot: " + result.getString("TimeSlot"));
             } else {
                 System.out.println("Movie not found.");
             }
@@ -25,3 +25,4 @@ public class MovieSearch {
         }
     }
 }
+

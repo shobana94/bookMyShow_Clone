@@ -1,12 +1,10 @@
-package movies;
-import java.sql.Connection;
+
 import java.sql.*;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.Scanner;
 
 public class MainApplication {
-    public static void main(String[] args) {
+    
+    public static void bookTicket() {
         Scanner scanner = new Scanner(System.in);
         
         while (true) {
@@ -33,13 +31,16 @@ public class MainApplication {
                 System.out.println("Enter the name of the movie:");
                 scanner.nextLine(); 
                 String movieName = scanner.nextLine();
+                
                 MovieSearch.searchMovie(movieName);
                 
                 System.out.println("Enter the number of seats you want:");
                 int seats = scanner.nextInt();
                 TicketBooking.bookTicket(movieName, seats);
+
+                TicketBooking.updateBookingDetails(movieName, seats);
                 
-                TicketDisplay.displayTicket(movieName, "Timing"); 
+                TicketDisplay.displayTicket(); 
             } else if (choice == 2) {
                 System.out.println("Exiting application.");
                 break;

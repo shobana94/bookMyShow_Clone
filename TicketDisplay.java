@@ -1,4 +1,4 @@
-package movies;
+
 
 import java.sql.Connection;
 import java.sql.*;
@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class TicketDisplay {
+    
     public static void displayTicket() {
         System.out.println();
         System.out.println("----------------------------");
@@ -18,12 +19,12 @@ public class TicketDisplay {
             ResultSet resultSet = statement.executeQuery("SELECT * FROM BookingDetails");
             if (resultSet.next()) {
                 String movieName = resultSet.getString("MovieName");
-                String timeSlot = resultSet.getTime("MovieTime").toString();
                 int bookedSeats = resultSet.getInt("SeatsBooked");
+                //String timeSlot = resultSet.getString("TimeSlot").toString();
                 // Display movie details
                 System.out.println("Movie: " + movieName);
-                System.out.println("Showtime: " + timeSlot);
                 System.out.println("Number of Tickets: " + bookedSeats);
+                //System.out.println("Showtime: " + timeSlot);
                 System.out.println();
                 int ticketPrice = 150;
                 // Display summary
