@@ -1,0 +1,58 @@
+# SQL Requirements
+
+# to create a database
+create database bookmyshow;
+
+# show databases
+show databases;
+
+use bookmyshow;
+
+show tables;
+
+
+create table
+
+
+ String query = "SELECT * FROM MovieSchedule WHERE MovieName = ?";
+
+ "Available seats: " + result.getInt("AvlSeats"));
+("Time slot: " + result.getTime("TimeSlot"));
+
+UPDATE MovieSchedule SET AvlSeats = AvlSeats - ? WHERE MovieName = ?"
+
+CREATE TABLE IF NOT EXISTS MovieSchedule (
+                                sId INT AUTO_INCREMENT PRIMARY KEY,
+                                MovieName VARCHAR(255), 
+                                AvlSeats VARCHAR(255), 
+                                TimeSlot VARCHAR(255));
+
+
+//
+INSERT INTO MovieSchedule (MovieName, AvlSeats, TimeSlot) VALUES ('Inception', '150', '12:00 PM');
+INSERT INTO MovieSchedule (MovieName, AvlSeats, TimeSlot) VALUES ('The Shawshank Redemption', '120', '3:00 PM');
+INSERT INTO MovieSchedule (MovieName, AvlSeats, TimeSlot) VALUES ('The Godfather', '100', '6:00 PM');
+INSERT INTO MovieSchedule (MovieName, AvlSeats, TimeSlot) VALUES ('Pulp Fiction', '110', '9:00 PM');
+INSERT INTO MovieSchedule (MovieName, AvlSeats, TimeSlot) values ('Monseter Inc','150','03:00 PM');
+INSERT INTO MovieSchedule (MovieName, AvlSeats, TimeSlot) values ('Zombie Nights','150','12:00 PM');
+INSERT INTO MovieSchedule (MovieName, AvlSeats, TimeSlot) values ('Zombie Nights','150','09:00 PM');
+
+
+
+
+
+SELECT * FROM BookingDetails
+
+String movieName = resultSet.getString("MovieName");
+                String timeSlot = resultSet.getString("MovieTime").toString();
+                int bookedSeats = resultSet.getInt("SeatsBooked");
+
+
+CREATE TABLE IF NOT EXISTS BookingDetails (
+                                bookingId INT AUTO_INCREMENT PRIMARY KEY,
+                                MovieName VARCHAR(255), 
+                                SeatsBooked INT, 
+                                TimeSlot VARCHAR(255));
+
+create table if not exists BookingDetails(bookingId INT AUTO_INCREMENT PRIMARY KEY, MovieName varchar(255), SeatsBooked
+INT, TimeSlot varchar(255));
